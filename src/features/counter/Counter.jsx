@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment, incrementByAmount } from "./counterSlice";
 const Counter = () => {
   const count = useSelector((state) => state.counter.count);
+  const color = useSelector((state) => state.theme.color);
   const dispatch = useDispatch();
   return (
     <div>
@@ -13,7 +14,9 @@ const Counter = () => {
       >
         +
       </button>
-      <span className="value">Count: {count}</span>
+      <span className="value" style={{ color: color }}>
+        Count: {count}
+      </span>
       <button
         className="btn"
         onClick={() => {

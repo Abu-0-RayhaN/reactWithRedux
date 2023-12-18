@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { changeTextColor } from "../counter/themeSlice";
 
 const Theme = () => {
   const [color, setColor] = useState("white");
   const dispatch = useDispatch();
+  const themcolor = useSelector((state) => state.theme.color);
   return (
     <div>
       <input
@@ -17,6 +18,7 @@ const Theme = () => {
         onClick={() => {
           dispatch(changeTextColor(color));
         }}
+        style={{ color: themcolor }}
       >
         Change Text Color
         <h1>{color}</h1>
