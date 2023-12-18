@@ -1,14 +1,14 @@
-import { useState } from "react";
-
-/* eslint-disable react/prop-types */
+import { useSelector, useDispatch } from "react-redux";
+import { decrement, increment } from "./counterSlice";
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const count = useSelector((state) => state.counter.count);
+  const dispatch = useDispatch();
   return (
     <div>
       <button
         className="btn"
         onClick={() => {
-          setCount(count + 1);
+          dispatch(increment());
         }}
       >
         +
@@ -17,7 +17,7 @@ const Counter = () => {
       <button
         className="btn"
         onClick={() => {
-          setCount(count - 1);
+          dispatch(decrement());
         }}
       >
         -
