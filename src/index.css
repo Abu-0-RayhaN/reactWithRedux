@@ -3,20 +3,31 @@
     padding: 0;
 }
 .app{
-    background: #000;
+    background: #a7cfa3;
     color:red;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     column-gap: 15px;
     height: 500px;
 }
 .btn{
-    padding: 15px;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 50px;
+    appearance: none;
+    background:none;
+    font-size: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+    outline: none;
+    border: 2px solid transparent white;
+    color: white;
+    padding-bottom: 4px;
 }
 .value{
     font-size: 50px;
+}
+.textbox{
+    font-size: 32px;
+    padding: 2px;
+    margin-right: 10px;
 }
