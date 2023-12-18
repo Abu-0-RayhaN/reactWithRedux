@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+/* eslint-disable react/prop-types */
 const Counter = () => {
   const [count, setCount] = useState(0);
   return (
@@ -12,7 +13,7 @@ const Counter = () => {
       >
         +
       </button>
-      <span className="value">{count}</span>
+      <span className="value">Count: {count}</span>
       <button
         className="btn"
         onClick={() => {
